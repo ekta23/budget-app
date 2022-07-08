@@ -1,0 +1,16 @@
+create database budget;
+
+create table login_user(id int AUTO_INCREMENT primary key, name varchar(50), email varchar(100), password varchar(200), age tinyint(2),gender tinyint(1), salary int, createdon datetime, updatedon datetime);
+
+create table expense(
+    expense_id int AUTO_INCREMENT primary key,
+    login_user_id int,
+    expense_name varchar(100),
+    expense_category varchar(50),
+    expense_date date,
+    expense_time time,
+    expesne_is_bookmarked tinyint(1),
+    expense_amount number(10,2),
+    createdon datetime,
+    updatedon datetime
+)
